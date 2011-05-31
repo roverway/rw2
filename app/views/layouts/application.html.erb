@@ -8,25 +8,28 @@
 </head>
 
 <body>
-  <div id="banner">
-    <h1> RoverWay </h1>
-    <p> Linux, ruby & rails, my life </p>
-  </div>
-  <div id="navbar">
-    <li><%= link_to "Home", root_url %></li>
-    <li><%= link_to "About Me", "#" %></li>
-  </div>
-  
-  <div class="leftbar">
-    <div id="category">
-      <h3>Categories</h3>
-      <li>category 1</li>
-      <li>category 2</li>
+  <div id="wrapper">
+    <div id="banner">
+      <h1> RoverWay </h1>
+      <p> Linux, ruby on rails, and things about my life </p>
     </div>
-  </div>
+    <div id="navbar">
+      <li><%= link_to "Home", root_url %></li>
+      <li><%= link_to "About Me", "#" %></li>
+    </div>
 
-  <div class="mainarea">
-    <%= yield %>
+    <div class="leftbar">
+      <div id="category">
+        <h3>Categories</h3>
+        <li>category 1</li>
+        <li>category 2</li>
+      </div>
+    </div>
+
+    <div class="mainarea">
+      <%= yield %>
+    </div>
+    <div id="blank"></div>
   </div>
 
 </body>

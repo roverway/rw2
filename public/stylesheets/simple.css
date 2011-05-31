@@ -1,8 +1,12 @@
-body {
+#wrapper {
   width: 1024px;
   margin: 0 auto;
-  height: 100%;
+  height: auto;
+  /*border: 10px solid black;*/
+  padding: 0 10px;
 }
+#blank { clear: both; }
+
 /*banner*/
 #banner h1 {
   margin: 50px 0 20px 0;
@@ -51,4 +55,6 @@ body {
 
 /*mainarea*/
 .mainarea { 
+  width: 800px;
+  float: right;
 }
