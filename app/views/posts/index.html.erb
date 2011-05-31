@@ -3,6 +3,7 @@
   <p><%= post.comments.count %></p>
   <p>created at <%= post.created_at %></p>
   <p><%=raw  post.body %></p>
+  <p>Tags: <%= post.tag_list %></p>
 
   <%= link_to 'Show', post %>
   <%= link_to 'Edit', edit_post_path(post) %>

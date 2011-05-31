@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <h2> <%= @post.title %> </h2>
-
 <p> <%= raw @post.body %> </p>
+<p>Tags: <%= @post.tag_list %></p>
 
 <%= link_to 'Edit', edit_post_path(@post) %>
 <%= link_to 'Back', posts_path %>
