@@ -1,0 +1,54 @@
+body {
+  width: 1024px;
+  margin: 0 auto;
+  height: 100%;
+}
+/*banner*/
+#banner h1 {
+  margin: 50px 0 20px 0;
+}
+#banner p {
+  margin: 20px 0;
+}
+/*navbar*/
+#navbar {
+  background: black;
+  color: white;
+  height: 40px;
+  margin: 30px 0;
+}
+#navbar li {
+  list-style-type: none;
+  float: left;
+  line-height: 40px;
+  margin-left: 10px;
+}
+
+#navbar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 0 10px;
+}
+#navbar a:hover {
+  background: grey;
+  color: black;
+}
+
+/*leftbar*/
+.leftbar {
+  float: left;
+  width: 200px;
+  height: 100%;
+}
+.leftbar #category {
+  padding-left: 10px;
+}
+#category h1, h2, h3 {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+/*mainarea*/
+.mainarea { 
+}
