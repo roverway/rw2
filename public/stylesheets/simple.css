@@ -2,8 +2,11 @@
   width: 1024px;
   margin: 0 auto;
   height: auto;
-  /*border: 10px solid black;*/
-  padding: 0 10px;
+  /*border: 1px solid black;*/
+  /*padding: 0 10px;*/
+}
+#wrapper a {
+  text-decoration: none;
 }
 #blank { clear: both; }
 
@@ -45,12 +48,12 @@
   width: 200px;
   height: 100%;
 }
-.leftbar #category {
-  padding-left: 10px;
-}
 #category h1, h2, h3 {
   text-align: left;
   margin-bottom: 10px;
+}
+#category ul {
+  padding-left: 25px;
 }
 
 /*mainarea*/

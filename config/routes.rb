@@ -1,5 +1,7 @@
 Rw::Application.routes.draw do
 
+  get "posts/tagged"
+
   resources :comments do 
     resources :comments
   end

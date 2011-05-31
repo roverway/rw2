@@ -21,8 +21,20 @@
     <div class="leftbar">
       <div id="category">
         <h3>Categories</h3>
-        <li>category 1</li>
-        <li>category 2</li>
+        <ul>
+          <li>category 1</li>
+          <li>category 2</li>
+        </ul>
+      </div>
+
+      <div id="tagcloud">
+        <h3>Tag cloud</h3>
+        <% tagcloud %>
+        <% if @tags %>
+          <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
+            <%= link_to tag, { :action => :index, :tag=> tag}, :class => css_class %>
+          <% end %>
+        <% end %>
       </div>
     </div>
 

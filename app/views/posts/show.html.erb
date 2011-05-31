@@ -2,7 +2,11 @@
 
 <h2> <%= @post.title %> </h2>
 <p> <%= raw @post.body %> </p>
-<p>Tags: <%= @post.tag_list %></p>
+
+<p>Tags:
+<% @post.tag_list.each do |tag| %>
+  <%= link_to tag, {:action=>'tagged', :tag=>tag} %>
+<% end %>
 
 <%= link_to 'Edit', edit_post_path(@post) %>
 <%= link_to 'Back', posts_path %>
