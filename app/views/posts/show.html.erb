@@ -1,24 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<h2> <%= @post.title %> </h2>
-<p> <%= raw @post.body %> </p>
+<div id="post_main">
+  <h2> <%= @post.title %> </h2>
+  <p> <%= raw @post.body %> </p>
 
-<p>Tags:
-<% @post.tag_list.each do |tag| %>
-  <%= link_to tag, {:action=>'tagged', :tag=>tag} %>
-<% end %>
+  <% if user_signed_in? %>
+    <div id="logged">
+      <%= link_to 'Edit', edit_post_path(@post) %>
+      <%= link_to 'Destroy', @post, :confirm => 'Are you sure?', :method => :delete %>
+    </div>
+  <% end %>
 
-<br \>
+  <%= link_to 'Back', posts_path %>
+  <%= link_to "Add a comment", new_post_comments_path(@post) %>
+</div>
 
-<% if user_signed_in? %>
-  <div id="logged">
-    <%= link_to 'Edit', edit_post_path(@post) %>
-    <%= link_to 'Destroy', @post, :confirm => 'Are you sure?', :method => :delete %>
-  </div>
-<% end %>
+<div id="post_info">
+  <p>Tags:
+  <% @post.tag_list.each do |tag| %>
+    <%= link_to tag, {:action=>'tagged', :tag=>tag} %>
+  <% end %>
+</div>
 
-<%= link_to 'Back', posts_path %>
-<%= link_to "Add a comment", new_post_comments_path(@post) %>
+<div id="blank"></div>
+
 <h3> comments </h3>
 <ul class="comment_list">
   <%= render :partial => 'comments/comment', :collection => @post.comments %>

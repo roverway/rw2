@@ -70,7 +70,7 @@
 }
 #post_main {
   width: 70%;
-  clear: both;
+  /*clear: both;*/
   float: left;
 }
 #post_info {
