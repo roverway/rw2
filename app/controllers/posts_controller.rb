@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_filter :authenticate_user!, :except => [:index, :show, :tagged]
 
   def tagged
-    @posts = Post.tagged_with(params[:tag])
+    @posts = Post.tagged_with(params[:tag]).by_date
   end
   # GET /posts
   # GET /posts.xml

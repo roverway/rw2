@@ -1,25 +1,26 @@
 <% @posts.each do |post| %>
-  <h2><%= link_to post.title, post %></h2>
-  <p><%= post.comments.count %></p>
-  <p>created at <%= post.created_at %></p>
-  <p><%=raw  post.body %></p>
+  <div id="post_main">
+    <h2><%= link_to post.title, post %></h2>
 
-  <p>Tags:
-  <% post.tag_list.each do |tag| %>
-    <%= link_to tag, {:action=>'tagged', :tag=>tag} %>
-  <% end %>
-  </p>
+    <% if user_signed_in? %>
+      <div id="logged">
+        <%= link_to 'Edit', edit_post_path(post) %>
+        <%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
+      </div>
+    <% end %>
 
-  <% if user_signed_in? %>
-    <div id="logged">
-      <%= link_to 'Edit', edit_post_path(post) %>
-      <%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
-    </div>
-  <% end %>
+    <p><%=raw  post.body %></p>
+  </div>
+
+  <div id="post_info">
+    <p><%= post.comments.count %></p>
+    <p>created at <%= post.created_at %></p>
+    <p>Tags:
+    <% post.tag_list.each do |tag| %>
+      <%= link_to tag, {:action=>'tagged', :tag=>tag} %>
+    <% end %>
+    </p>
+  </div>
 
 <% end %>
-
-<br />
-
-<%= link_to 'New Post', new_post_path %>
 

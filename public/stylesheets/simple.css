@@ -68,3 +68,13 @@
   width: 800px;
   float: right;
 }
+#post_main {
+  width: 70%;
+  clear: both;
+  float: left;
+}
+#post_info {
+  width: 25%;
+  float: right;
+  color: grey;
+}
