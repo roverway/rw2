@@ -28,7 +28,6 @@
   list-style-type: none;
   float: left;
   line-height: 40px;
-  margin-left: 10px;
 }
 
 #navbar a {
@@ -40,6 +39,14 @@
 #navbar a:hover {
   background: grey;
   color: black;
+}
+
+#navbar #logged {
+  float: right;
+  color: grey;
+}
+#navbar #logged a {
+  color: #bbbbbb;
 }
 
 /*leftbar*/
