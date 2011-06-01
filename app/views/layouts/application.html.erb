@@ -37,8 +37,9 @@
         <div id="category">
           <h3>Categories</h3>
           <ul>
-            <li>category 1</li>
-            <li>category 2</li>
+            <% CATEGORIES.each do |c| %>
+              <li><%= c %></li>
+            <% end %>
           </ul>
         </div>
 
