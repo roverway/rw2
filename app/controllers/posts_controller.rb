@@ -1,8 +1,9 @@
 class PostsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:index, :show, :tagged]
+  before_filter :authenticate_user!, :except => [:index, :show, :filter]
 
-  def tagged
-    @posts = Post.tagged_with(params[:tag]).by_date
+  def filter
+    @posts = Post.tagged_with(params[:tag]).by_date if params[:tag]
+    @posts = Post.where("category=?", params[:category]) if params[:category]
   end
   # GET /posts
   # GET /posts.xml

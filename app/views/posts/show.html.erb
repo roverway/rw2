@@ -18,7 +18,7 @@
 <div id="post_info">
   <p>Tags:
   <% @post.tag_list.each do |tag| %>
-    <%= link_to tag, {:action=>'tagged', :tag=>tag} %>
+    <%= link_to tag, {:action=>'filter', :tag=>tag} %>
   <% end %>
 </div>
 

@@ -20,7 +20,6 @@ class CommentsController < ApplicationController
   def get_parent
     @parent = Post.find(params[:post_id]) if params[:post_id]
     @parent = Comment.find(params[:comment_id]) if params[:comment_id]
-
     redirect_to root_path unless defined?(@parent)
   end
 end

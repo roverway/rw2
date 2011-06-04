@@ -10,13 +10,13 @@
 <body>
   <div id="wrapper">
     <div id="banner">
-      <h1> RoverWay </h1>
+      <h1><%= link_to "RoverWay", root_url%> </h1>
       <p> Linux, ruby on rails, and things about my life </p>
     </div>
 
     <div id="navbar">
       <li><%= link_to "Home", root_url %></li>
-      <li><%= link_to "About Me", "#" %></li>
+      <li><%= link_to "About Me", "aboutme" %></li>
 
       <% if user_signed_in? %>
         <div id="logged">
@@ -33,23 +33,36 @@
     </div>
 
     <% tagcloud %>
-    <% if controller.class == PostsController && @tags %>
+    <% if controller_name == "posts" && @tags %>
       <div class="leftbar">
         <div id="category">
           <h3>Categories</h3>
           <ul>
             <% CATEGORIES.each do |c| %>
-              <li><%= c %></li>
+              <li>
+              <%= link_to c, {:action=>'filter', :category=>c} %>
+              <span>(<%= post_counter(c) %>)</span>
+              </li>
             <% end %>
           </ul>
         </div>
 
         <div id="tagcloud">
-          <h3>Tag cloud</h3>
+          <h3>Tags </h3>
           <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
-            <%= link_to tag, { :action => :tagged, :tag=> tag.name}, :class => css_class %>
+            <%= link_to tag, { :action => :filter, :tag=> tag.name}, :class => css_class %>
           <% end %>
         </div>
+
+        <div id="recent_comment">
+          <h3>Recent Comments</h3>
+          <ul>
+            <% Comment.recent.each do |c| %>
+              <li><%= link_to c.body, :controller=>"posts", :action=>"show", :id=>find_post(c).id,:anchor=>c.id %></li>
+            <% end %>
+          </ul>
+        </div>
+
       </div>
     <% end %>
 

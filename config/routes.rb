@@ -2,7 +2,7 @@ Rw::Application.routes.draw do
 
   devise_for :users
 
-  get "posts/tagged"
+  get "posts/filter"
 
   resources :comments do 
     resources :comments
