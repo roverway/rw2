@@ -55,6 +55,9 @@
   width: 200px;
   height: 100%;
 }
+#query input#query {
+  width: 100px;
+}
 #category h1, h2, h3 {
   text-align: left;
   margin-bottom: 10px;

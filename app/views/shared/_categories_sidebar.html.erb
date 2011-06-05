@@ -1,0 +1,12 @@
+<div id="category">
+  <h3>Categories</h3>
+  <ul>
+    <% CATEGORIES.each do |c| %>
+      <li>
+      <%= link_to c, {:controller=>'posts', :action=>'filter', :category=>c} %>
+      <span>(<%= post_counter(c) %>)</span>
+      </li>
+    <% end %>
+  </ul>
+</div>
+

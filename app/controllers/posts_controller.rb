@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   def filter
     @posts = Post.tagged_with(params[:tag]).by_date if params[:tag]
     @posts = Post.where("category=?", params[:category]) if params[:category]
+    @posts = Post.where("title like ? OR body like ?", "%#{params[:query]}%", "%#{params[:query]}%" ) if params[:query]
   end
   # GET /posts
   # GET /posts.xml
