@@ -1,5 +1,5 @@
 <% tagcloud %>
-<% if controller_name == "posts" && @tags %>
+<% if @tags %>
   <div id="tagcloud">
     <h3>Tags </h3>
     <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
