@@ -10,7 +10,8 @@ class PostsController < ApplicationController
   def feed
     @title = "All posts of rw"
     @posts = Post.order("created_at DESC")
-    @updated = Post.first.updated_at unless @posts.empty?
+    @updated = posts.first.updated_at unless @posts.empty?
+    @author = "roverway"
 
     respond_to do |format|
       format.atom { render :layout => false }
