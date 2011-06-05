@@ -1,9 +1,20 @@
-#wrapper {
-  width: 946px;
+body {
+  background: #dedede;
+}
+body, p, ol, ul, td {
+  font-family: arial, verdana, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
+#wrap1 {
+  width: 966px;
+  background: white;
   margin: 0 auto;
-  height: auto;
-  /*border: 1px solid black;*/
-  /*padding: 0 10px;*/
+  border: 1px solid #cac1c1;
+}
+#wrapper {
+  width: 936px;
+  margin: 0 auto;
 }
 #wrapper a {
   text-decoration: none;
@@ -12,10 +23,15 @@
 
 /*banner*/
 #banner h1 {
-  margin: 50px 0 20px 0;
+  padding: 50px 0 0px 0;
+  margin: 0;
 }
 #banner p {
-  margin: 20px 0;
+  margin: 10px 0 40px 0;
+}
+#banner h1 a:hover {
+  background: white;
+  color: black;
 }
 /*navbar*/
 #navbar {
@@ -23,6 +39,7 @@
   color: white;
   height: 40px;
   margin: 30px 0;
+  padding: 0 10px;
 }
 #navbar li {
   list-style-type: none;
@@ -35,10 +52,11 @@
   color: white;
   text-decoration: none;
   padding: 0 10px;
+  font-size: 16px;
 }
 #navbar a:hover {
-  background: grey;
-  color: black;
+  background: #333333;
+  color: white;
 }
 
 #navbar #logged {
@@ -55,6 +73,7 @@
   width: 200px;
   height: 100%;
 }
+
 #query input#query {
   width: 100px;
 }
@@ -71,7 +90,7 @@
 
 /*mainarea*/
 .mainarea { 
-  width: 730px;
+  width: 720px;
   float: right;
 }
 #post_main {
@@ -89,3 +108,5 @@
   float: right;
   color: grey;
 }
+
+

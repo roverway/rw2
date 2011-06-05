@@ -1,11 +1,24 @@
 class PostsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:index, :show, :filter]
+  before_filter :authenticate_user!, :except => [:index, :show, :filter, :feed]
 
   def filter
     @posts = Post.tagged_with(params[:tag]).by_date if params[:tag]
     @posts = Post.where("category=?", params[:category]) if params[:category]
     @posts = Post.where("title like ? OR body like ?", "%#{params[:query]}%", "%#{params[:query]}%" ) if params[:query]
   end
+
+  def feed
+    @title = "All posts of rw"
+    @posts = Post.order("created_at DESC")
+    @updated = Post.first.updated_at unless @posts.empty?
+
+    respond_to do |format|
+      format.atom { render :layout => false }
+      format.rss { redirect_to feed_path(:format => :atom), :status => :moved_permanently }
+      format.xml  { render :xml => @posts }
+    end
+  end
+
   # GET /posts
   # GET /posts.xml
   def index
@@ -13,6 +26,9 @@ class PostsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @posts }
+
+      format.atom { render :layout => false }
+      format.rss { redirect_to posts_url(:format => :atom), :status => :moved_permanently }
     end
   end
 

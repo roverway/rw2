@@ -12,6 +12,10 @@ Rw::Application.routes.draw do
     resource :comments
   end
 
+  match '/feed' => 'posts#feed',
+    :as => :feed,
+    :defaults => { :format => 'atom' }
+
   root :to => "posts#index"
 
   # The priority is based upon order of creation:
