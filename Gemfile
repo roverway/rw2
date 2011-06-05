@@ -9,6 +9,12 @@ gem 'sqlite3'
 gem 'acts-as-taggable-on' 
 gem 'devise'
 
+gem 'recaptcha', :require => 'recaptcha/rails'
+
+
+
+
+
 gem 'hirb'
 
 # Use unicorn as the web server

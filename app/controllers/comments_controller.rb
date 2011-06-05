@@ -8,7 +8,7 @@ class CommentsController < ApplicationController
   def create
     @comment = @parent.comments.build(params[:comment])
 
-    if @comment.save
+    if verify_recaptcha(:model => @comment, :message => "Oh! It's error with reCAPTCHA!") &&  @comment.save
       redirect_to post_path(@comment.post), :notice => "Thank you for your comment!"
     else
       render :new
