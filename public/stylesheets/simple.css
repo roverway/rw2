@@ -79,6 +79,11 @@
   /*clear: both;*/
   float: left;
 }
+#post_main #logged {
+  float: right;
+  font-style: italic;
+  font-size: 0.6em;
+}
 #post_info {
   width: 25%;
   float: right;
