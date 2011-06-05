@@ -9,10 +9,10 @@ module ApplicationHelper
     Post.where("category=?",category).count
   end
 
-  def find_post(comment)
-    unless comment.commentable_type=="Post"
-      comment=Comment.find(comment.commentable_id)
-      find_post(comment)
+  def find_post_by(comment)
+    until comment.commentable_type=="Post" do
+      comment = Comment.find(comment.commentable_id)
+      find_post_by(comment)
     end
     Post.find(comment.commentable_id)
   end

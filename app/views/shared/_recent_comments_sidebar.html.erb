@@ -2,13 +2,15 @@
   <h3>Recent Comments</h3>
   <ul>
     <% Comment.recent.each do |c| %>
-      <li> <%= link_to c.body, { :controller=>"posts",
-        :action=>"show",
-        :id=>find_post(c).id,
-        :anchor=>c.id },
-        :title=>"jump to that positon" %> </li>
-      <% end %>
-    </ul>
-  </div>
+      <li>
+        <%= link_to c.body, { :controller=>"posts",
+          :action=>"show",
+          :id=>find_post_by(c).id,
+          :anchor=>c.id },
+          :title=>"jump to that positon" %>
+      </li>
+    <% end %>
+  </ul>
+</div>
 
 
