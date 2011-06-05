@@ -12,10 +12,11 @@
   <% end %>
 
   <%= link_to 'Back', posts_path %>
-  <%= link_to "Add a comment", new_post_comments_path(@post) %>
+  <%= link_to "Comment", new_post_comments_path(@post) %>
 </div>
 
 <div id="post_info">
+  <p><%= @post.created_at.strftime('%Y-%m-%d %H:%M:%S') %></p>
   <p>Tags:
   <% @post.tag_list.each do |tag| %>
     <%= link_to tag, {:action=>'filter', :tag=>tag} %>

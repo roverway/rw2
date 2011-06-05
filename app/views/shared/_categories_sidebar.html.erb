@@ -3,7 +3,7 @@
   <ul>
     <% CATEGORIES.each do |c| %>
       <li>
-      <%= link_to c, {:controller=>'posts', :action=>'filter', :category=>c} %>
+      <%= link_to c, {:controller=>'posts', :action=>'filter', :category=>c}, :title=>"show posts under this category" %>
       <span>(<%= post_counter(c) %>)</span>
       </li>
     <% end %>
