@@ -16,4 +16,7 @@ module ApplicationHelper
     end
     Post.find(comment.commentable_id)
   end
+
+
+
 end

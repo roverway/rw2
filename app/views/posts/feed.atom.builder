@@ -7,7 +7,7 @@ atom_feed do |feed|
       entry.title post.title
       entry.content post.body, :type=>"html" 
       # the strftime is needed to work with Google Reader.
-      entry.updated post.updated_at.strftime("%Y-%m-%dT%H:%M:%SZ") 
+      #entry.updated post.updated_at.strftime("%Y-%m-%dT%H:%M:%SZ") 
       entry.author do |author|
         author.name @author 
       end

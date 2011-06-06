@@ -97,6 +97,7 @@ class PostsController < ApplicationController
   # DELETE /posts/1.xml
   def destroy
     @post = Post.find(params[:id])
+    clear_unused_tags_with(@post.id)
     @post.destroy
 
     respond_to do |format|
@@ -104,4 +105,18 @@ class PostsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+
+
+  private
+
+  def clear_unused_tags_with(post_id)
+    taggings=Tagging.where("taggable_type=? and taggable_id=?", "Post", post_id)
+    taggings.each do |tagging|
+      unless Tagging.where("tag_id = #{tagging.tag_id}").count >= 2
+        Tag.delete(tagging.tag_id)
+      end
+    end
+  end
+
 end
