@@ -1,5 +1,7 @@
 body {
   background: #dedede;
+  /*background: #242d36;*/
+  margin: 0px;
 }
 body, p, ol, ul, td {
   font-family: arial, verdana, helvetica, sans-serif;
@@ -75,7 +77,7 @@ body, p, ol, ul, td {
 }
 
 #query input#query {
-  width: 100px;
+  width: 170px;
 }
 #category h1, h2, h3 {
   text-align: left;
