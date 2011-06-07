@@ -8,8 +8,12 @@ gem 'rails', '3.0.7'
 gem 'sqlite3'
 gem 'acts-as-taggable-on' 
 gem 'devise'
-
 gem 'recaptcha', :require => 'recaptcha/rails'
+gem 'rdiscount', :require => 'rdiscount'
+gem 'coderay'
+
+#gem 'highlight', :require => 'simplabs/highlight'
+#gem 'ckeditor', :git => 'git://github.com/galetahub/rails-ckeditor.git', :branch => 'rails3' 
 
 
 

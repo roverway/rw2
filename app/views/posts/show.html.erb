@@ -11,7 +11,7 @@
     <% end %>
   </h2>
 
-  <p> <%= raw @post.body %> </p>
+  <%= raw render_body(@post.body) %>
 
   <%= link_to 'Back', posts_path %>
   <%= link_to "Comment", new_post_comments_path(@post) %>

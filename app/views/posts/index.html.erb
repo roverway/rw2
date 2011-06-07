@@ -9,8 +9,7 @@
         </div>
       <% end %>
     </h2>
-
-    <p><%=raw  post.body %></p>
+    <%= raw render_body(post.body) %>
   </div>
 
   <div id="post_info">

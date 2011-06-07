@@ -110,6 +110,8 @@ class PostsController < ApplicationController
 
   private
 
+  # a fix of acts_as_taggable_on, aimed to
+  # clear unused tags
   def clear_unused_tags_with(post_id)
     taggings=Tagging.where("taggable_type=? and taggable_id=?", "Post", post_id)
     taggings.each do |tagging|
@@ -118,5 +120,7 @@ class PostsController < ApplicationController
       end
     end
   end
+
+
 
 end
