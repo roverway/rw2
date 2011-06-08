@@ -5,9 +5,10 @@ module PostsHelper
   def render_body(body)
     RDiscount.new(coderay(body)).to_html
   end
+
   def coderay(text)
-    text.gsub(/\<code( lang="(.+?)")?\>(.+?)\<\/code\>/m) do
-      CodeRay.scan($3, $2).div
+    text.gsub(/\<code(:(.+?))?\>(.+?)\<\/code\>/m).each do |match|
+      CodeRay.scan($3.strip, $2).div(:line_numbers=>:table)
     end
   end
 
