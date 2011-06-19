@@ -1,15 +1,19 @@
 Rw::Application.routes.draw do
 
   devise_for :users
-
-  get "posts/filter"
+  resources :users do
+    # you can link_to "sdf", set_roles_user_path(@user) after below
+    #get :set_roles, :on => :member
+  end
 
   resources :comments do 
     resources :comments
   end
 
+  #get "posts/filter"
   resources :posts do 
     resource :comments
+    get :filter, :on => :collection
   end
 
   match '/feed' => 'posts#feed',

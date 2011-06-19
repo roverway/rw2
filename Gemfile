@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.7'
+gem 'rails', '3.0.9'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -9,17 +9,16 @@ gem 'sqlite3'
 gem 'acts-as-taggable-on' 
 gem 'devise'
 gem 'recaptcha', :require => 'recaptcha/rails'
-gem 'rdiscount', :require => 'rdiscount'
+gem 'rdiscount'
 gem 'coderay'
+gem 'cancan'
 
-#gem 'highlight', :require => 'simplabs/highlight'
 #gem 'ckeditor', :git => 'git://github.com/galetahub/rails-ckeditor.git', :branch => 'rails3' 
 
 
-
-
-
-gem 'hirb'
+group :development, :test do
+  gem 'hirb'
+end
 
 # Use unicorn as the web server
 # gem 'unicorn'

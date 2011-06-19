@@ -1,0 +1,26 @@
+<h2><%= t('.all_users') %></h2>
+
+<% @users.each do |user| %>
+  <table>
+    <tr>
+      <td><%= t('.user_email') %></td>
+      <td><%= t('.user_roles') %> </td>
+      <td><%= t('.user_created_at') %> </td>
+      <td><%= t('.manage_user') %></td>
+    </tr>
+    <tr>
+      <td> <%= user.email %> </td>
+      <td>
+        <% user.roles.each do |role| %>
+          <%= role.name %>
+        <% end %>
+      </td>
+      <td> <%= user.created_at %> </td>
+      <td>
+        <%= link_to "show", user %>
+        <%= link_to "edit", edit_user_path(user) %>
+        <%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %>
+      </td>
+    </tr>
+  </table>
+<% end %>
