@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:index, :show, :filter, :feed]
+  load_and_authorize_resource
+  #before_filter :authenticate_user!, :except => [:index, :show, :filter, :feed]
 
   def filter
     @posts = Post.tagged_with(params[:tag]).by_date if params[:tag]
