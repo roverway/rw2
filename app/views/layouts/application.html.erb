@@ -25,15 +25,7 @@
         <div id="navbar">
           <li><%= link_to "Home", root_url %></li>
           <li><%= link_to "About Me", "aboutme" %></li>
-
-          <% if user_signed_in? %>
-            <div id="logged">
-              <li><%= current_user.email %></li>
-              <li><%= current_user.role_ids %></li>
-              <li><%= link_to 'New Post', new_post_path %></li>
-              <li><%= link_to "Logout", "/users/sign_out" %></li>
-            </div>
-          <% end %>
+          <%= render "shared/logged_in" %>
         </div>
 
         <div id="notice">
@@ -59,6 +51,5 @@
       </div>
     </div>
   </body>
-
 
 </html>

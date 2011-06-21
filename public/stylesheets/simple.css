@@ -42,6 +42,7 @@ body, p, ol, ul, td {
   height: 40px;
   margin: 30px 0;
   padding: 0 10px;
+  position: relative; /*set this for the absolute position #navbar #logged*/
 }
 #navbar li {
   list-style-type: none;
@@ -62,11 +63,23 @@ body, p, ol, ul, td {
 }
 
 #navbar #logged {
-  float: right;
   color: grey;
+  position: absolute;
+  right: 15px;
 }
 #navbar #logged a {
   color: #bbbbbb;
+}
+#navbar #logged li {
+  background: black;
+  text-align: right;
+}
+#navbar #logged li span {
+  display: none;
+  padding: 0 10px;
+}
+#navbar #logged li:hover span {
+  display: block;
 }
 
 /*leftbar*/
