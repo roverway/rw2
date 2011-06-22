@@ -1,8 +1,7 @@
 module ApplicationHelper
-    #$tags = Post.tag_counts_on(:tags)
+
   def tagcloud
     @tags = Post.tag_counts_on(:tags)
-    return @tags
   end
 
   def post_counter(category)
@@ -16,7 +15,5 @@ module ApplicationHelper
     end
     Post.find(comment.commentable_id)
   end
-
-
 
 end

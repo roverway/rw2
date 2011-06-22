@@ -10,7 +10,6 @@ Rw::Application.routes.draw do
     resources :comments
   end
 
-  #get "posts/filter"
   resources :posts do 
     resource :comments
     get :filter, :on => :collection

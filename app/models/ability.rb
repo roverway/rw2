@@ -9,7 +9,7 @@ class Ability
     elsif user.roles_include :normal_admin
       can :manage, [Post, Comment]
     else 
-      can [:read, :filter], Post
+      can [:read, :filter, :feed], Post
       can :create, Comment
     end
 
