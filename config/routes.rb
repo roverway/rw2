@@ -1,10 +1,7 @@
 Rw::Application.routes.draw do
 
   devise_for :users
-  resources :users do
-    # you can link_to "sdf", set_roles_user_path(@user) after below
-    #get :set_roles, :on => :member
-  end
+  resources :users
 
   resources :comments do 
     resources :comments
