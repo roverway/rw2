@@ -12,6 +12,7 @@ gem 'recaptcha', :require => 'recaptcha/rails'
 gem 'rdiscount'
 gem 'coderay'
 gem 'cancan'
+#gem 'themes_for_rails'
 
 #gem 'ckeditor', :git => 'git://github.com/galetahub/rails-ckeditor.git', :branch => 'rails3' 
 

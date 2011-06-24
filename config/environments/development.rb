@@ -20,6 +20,12 @@ Rw::Application.configure do
   # devise config
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
+  # theme support
+  # set asset_path 
+  THEMENAME = "simple_blog"
+  config.action_controller.asset_path = proc { |asset_path|
+    "/themes/#{THEMENAME}#{asset_path}"
+  }
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
