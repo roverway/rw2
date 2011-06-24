@@ -5,8 +5,11 @@ class ApplicationController < ActionController::Base
     redirect_to root_url, :alert => exception.message
   end
 
-  prepend_view_path("#{Rails.root}/themes/#{THEMENAME}/views")
+  #prepend_view_path("#{Rails.root}/themes/#{THEMENAME}/views")
   #@cached[theme_name] ||= ActionView::Base.process_view_paths(theme_path)
   #self.view_paths = ActionController::Base.view_paths.dup.unshift @cached[theme_name]
+  
+  theme "greader"
+
 
 end

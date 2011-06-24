@@ -22,10 +22,10 @@ Rw::Application.configure do
 
   # theme support
   # set asset_path 
-  THEMENAME = "simple_blog"
-  config.action_controller.asset_path = proc { |asset_path|
-    "/themes/#{THEMENAME}#{asset_path}"
-  }
+  #THEMENAME = "simple_blog"
+  #config.action_controller.asset_path = proc { |asset_path|
+    #"/themes/#{THEMENAME}#{asset_path}"
+  #}
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
