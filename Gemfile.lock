@@ -83,6 +83,7 @@ GEM
     tzinfo (0.3.28)
     warden (1.0.4)
       rack (>= 1.0)
+    web-app-theme (0.6.3)
 
 PLATFORMS
   ruby
@@ -98,3 +99,4 @@ DEPENDENCIES
   recaptcha
   sqlite3
   themes_for_rails
+  web-app-theme (>= 0.6.2)

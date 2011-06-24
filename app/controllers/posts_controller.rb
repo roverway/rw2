@@ -2,6 +2,8 @@ class PostsController < ApplicationController
   load_and_authorize_resource
   #before_filter :authenticate_user!, :except => [:index, :show, :filter, :feed]
 
+  #$THEMENAME = "greader"
+
   def filter
     @posts = Post.tagged_with(params[:tag]).by_date if params[:tag]
     @posts = Post.where("category=?", params[:category]) if params[:category]
