@@ -1,0 +1,17 @@
+<% if user_signed_in? %>
+  <div id="logged">
+    <li>
+    <%= current_user.email %>
+    <span>
+      <p>
+        <% current_user.roles.each do |role| %>
+          <%= role.name %>
+        <% end %>
+        <%= link_to 'New Post', new_post_path %>
+        <%= link_to "Logout", "/users/sign_out" %>
+      </p>
+    </span>
+    </li>
+  </div>
+<% end %>
+

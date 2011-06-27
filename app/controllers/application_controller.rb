@@ -14,8 +14,8 @@ class ApplicationController < ActionController::Base
   private
 
   def cur_theme
-    $THEMENAME ||= "greader" 
+    #$THEMENAME ||= "greader" 
+    session[:theme] ||= "fanfou"
   end
-
 
 end

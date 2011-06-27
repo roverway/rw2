@@ -1,0 +1,9 @@
+<%= @user.email %>
+<br \>
+<% @user.roles.each do |role| %>
+  <%= role.name %>
+<% end %>
+
+<br \>
+<%= link_to "back", users_path %>
+<%= link_to "edit", edit_user_path(@user) %>
