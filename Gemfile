@@ -18,10 +18,10 @@ gem 'themes_for_rails'
 #gem 'ckeditor', :git => 'git://github.com/galetahub/rails-ckeditor.git', :branch => 'rails3' 
 
 
-group :development, :test do
-  gem 'hirb'
-  gem 'web-app-theme', '>= 0.6.2'
-end
+#group :development, :test do
+  #gem 'hirb'
+  #gem 'web-app-theme', '>= 0.6.2'
+#end
 
 # Use unicorn as the web server
 # gem 'unicorn'
