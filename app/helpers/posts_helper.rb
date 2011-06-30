@@ -7,7 +7,7 @@ module PostsHelper
   # which colored the code before it being storing into the datebase
   # and the view just get a colored normal html content.
   def render_body(body)
-    RDiscount.new(coderay(body)).to_html
+    RDiscount.new(coderay(body)).to_html.html_safe
   end
   def coderay(text)
     text.gsub(/\<code(:(.+?))?\>(.+?)\<\/code\>/m).each do |match|
