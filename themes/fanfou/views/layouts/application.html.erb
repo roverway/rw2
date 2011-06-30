@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Rw</title>
+    <title>RoverWay, a personal website of linux, ruby on rails and something else</title>
     <%= theme_stylesheet_link_tag 'scaffold', 'tagcloud', 'greader' %>
     <%= theme_javascript_include_tag 'prototype', 'effects', 'dragdrop', 'controls', 'rails', 'application' %>
     <%= csrf_meta_tag %>
@@ -34,6 +34,9 @@
           <h1>
             <%= link_to "RoverWay", root_url%>
             <%= link_to theme_image_tag('rss.png'), feed_path %>
+
+            <!-- google +1 button -->
+            <g:plusone size="small"></g:plusone>
           </h1>
           <p> Linux, ruby on rails, and things about my life </p>
         </div>
