@@ -9,13 +9,13 @@ class ApplicationController < ActionController::Base
   #@cached[theme_name] ||= ActionView::Base.process_view_paths(theme_path)
   #self.view_paths = ActionController::Base.view_paths.dup.unshift @cached[theme_name]
   
-  #theme :cur_theme
+  theme :cur_theme
 
   private
 
   def cur_theme
-    #$THEMENAME ||= "greader" 
-    session[:theme] ||= "fanfou"
+    $THEMENAME ||= "default_theme" 
+    #session[:theme] ||= "default_theme"
   end
 
 end

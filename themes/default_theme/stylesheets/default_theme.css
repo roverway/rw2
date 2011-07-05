@@ -1,0 +1,127 @@
+body {
+  background: #dedede;
+  /*background: #242d36;*/
+  margin: 0px;
+}
+body, p, ol, ul, td {
+  font-family: arial, verdana, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
+#wrap1 {
+  width: 966px;
+  background: white;
+  margin: 0 auto;
+  border: 1px solid #cac1c1;
+}
+#wrapper {
+  width: 936px;
+  margin: 0 auto;
+}
+#wrapper a {
+  text-decoration: none;
+}
+#blank { clear: both; }
+
+/*banner*/
+#banner h1 {
+  padding: 50px 0 0px 0;
+  margin: 0;
+}
+#banner p {
+  margin: 10px 0 40px 0;
+}
+#banner h1 a:hover {
+  background: white;
+  color: black;
+}
+/*navbar*/
+#navbar {
+  background: black;
+  color: white;
+  height: 40px;
+  margin: 30px 0;
+  padding: 0 10px;
+  position: relative; /*set this for the absolute position #navbar #logged*/
+}
+#navbar li {
+  list-style-type: none;
+  float: left;
+  line-height: 40px;
+}
+
+#navbar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 0 10px;
+  font-size: 16px;
+}
+#navbar a:hover {
+  background: #333333;
+  color: white;
+}
+
+#navbar #logged {
+  color: grey;
+  position: absolute;
+  right: 15px;
+}
+#navbar #logged a {
+  color: #bbbbbb;
+}
+#navbar #logged li {
+  background: black;
+  text-align: right;
+}
+#navbar #logged li span {
+  display: none;
+  padding: 0 10px;
+}
+#navbar #logged li:hover span {
+  display: block;
+}
+
+/*leftbar*/
+.leftbar {
+  float: left;
+  width: 200px;
+  height: 100%;
+}
+
+#query input#query {
+  width: 170px;
+}
+#category h1, h2, h3 {
+  text-align: left;
+  margin-bottom: 10px;
+}
+.leftbar ul {
+  padding-left: 25px;
+}
+#category span {
+  color: grey;
+}
+
+/*mainarea*/
+.mainarea { 
+  width: 720px;
+  float: right;
+}
+#post_main {
+  width: 70%;
+  /*clear: both;*/
+  float: left;
+}
+#post_main #logged {
+  float: right;
+  font-style: italic;
+  font-size: 0.6em;
+}
+#post_info {
+  width: 25%;
+  float: right;
+  color: grey;
+}
+
+

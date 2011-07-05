@@ -1,0 +1,6 @@
+<div id="query">
+  <%= form_tag "/posts/filter", :method=>"get" do %>
+    <%= text_field_tag :query, placeholder="search inside this site" %>
+    <%#<%= submit_tag "search", options={:id=>"submit"} %>
+  <% end %>
+</div>

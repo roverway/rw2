@@ -2,8 +2,8 @@
 <html>
   <head>
     <title> RoverWay, a personal website of linux, ruby on rails and something </title>
-    <%= stylesheet_link_tag 'scaffold', 'tagcloud', 'simple' %>
-    <%= javascript_include_tag 'prototype', 'effects', 'dragdrop', 'controls', 'rails', 'application' %>
+    <%= theme_stylesheet_link_tag 'scaffold', 'tagcloud', 'default_theme' %>
+    <%= theme_javascript_include_tag 'prototype', 'effects', 'dragdrop', 'controls', 'rails', 'application' %>
 
     <%= csrf_meta_tag %>
 
@@ -58,7 +58,7 @@
         <div id="blank"></div>
 
         <div id="footer">
-          <p> Designed by rw with RubyOnRails, use theme default </>
+          <p> Designed by rw with RubyOnRails, use theme default_theme </>
         </div>
 
       </div>
