@@ -1,7 +1,10 @@
 class Post < ActiveRecord::Base
   has_many :comments, :as => :commentable, :dependent => :destroy
   acts_as_taggable_on :tags
+
   scope :by_date, :order => "created_at DESC"
+
+  has_friendly_id :title, :use_slug => true
 
   #before_save :render_body
   # for highlighter

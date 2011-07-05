@@ -12,9 +12,8 @@
   </h2>
   <%= raw render_body(@post.body) %>
 
-  <script type="text/javascript" id="wumiiRelatedItems"></script>
-
   <% render "shared/wumi" %>
+  <script type="text/javascript" id="wumiiRelatedItems"></script>
 
   <%= link_to 'Back', posts_path %>
   <%= link_to "Comment", new_post_comments_path(@post) %>
