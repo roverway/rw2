@@ -1,8 +1,8 @@
 <% content_for :wumi do %>
 <script type="text/javascript">
-  var wumiiPermaLink = <%= post_path(@post) %>;
-  var wumiiTitle = <%= @post.title %>;
-  var wumiiTags = <%= @post.tag_list.to_s %>;
+  var wumiiPermaLink = "<%= post_path(@post) %>";
+  var wumiiTitle = "<%= @post.title %>";
+  var wumiiTags = "<%= @post.tag_list.to_s %>";
   var wumiiSitePrefix = "http://www.roverway.info/";
   var wumiiParams = "&num=5&mode=3&pf=JAVASCRIPT";
   </script>
