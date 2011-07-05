@@ -10,13 +10,12 @@
     <%= auto_discovery_link_tag :atom, "/feed" %>
     <%= auto_discovery_link_tag :rss, "/feed.rss" %>
 
-    <%= yield :wumi %>
 
     <!-- for google +1, Place this tag in your head or just before your close body tag -->
     <!--    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>  -->
-
     <%= render "shared/google_analysics" %>
 
+    <meta name="wumiiVerification" content="0bf1b29b-1a91-4bda-88af-c9ce63fce92e" />
   </head>
 
   <body>
@@ -54,6 +53,7 @@
         </div>
 
         <div class="mainarea">
+          <%= yield :wumi %>
           <%= yield %>
         </div>
 
@@ -65,6 +65,6 @@
 
       </div>
     </div>
+    <%= yield :wumi %>
   </body>
-
 </html>
