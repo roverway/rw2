@@ -9,7 +9,9 @@
         </div>
       <% end %>
     </h2>
-  <%= raw render_body(post.body) %>
+    <%= raw render_body(post.body) %>
+
+
   </div>
 
   <div id="post_info">
@@ -20,6 +22,7 @@
       <%= link_to tag, {:action=>'filter', :tag=>tag} %>
     <% end %>
     </p>
+
   </div>
 
   <div id="blank"></div>

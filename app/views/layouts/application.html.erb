@@ -2,8 +2,9 @@
 <html>
   <head>
     <title>Rw</title>
-    <%= stylesheet_link_tag 'scaffold', 'tagcloud', 'simple', :cache => "blog" %>
-    <%= javascript_include_tag :defaults %>
+    <%= stylesheet_link_tag 'scaffold', 'tagcloud', 'simple' %>
+    <%= javascript_include_tag 'prototype', 'effects', 'dragdrop', 'controls', 'rails', 'application' %>
+
     <%= csrf_meta_tag %>
 
     <%= auto_discovery_link_tag :atom, "/feed" %>
@@ -40,6 +41,7 @@
             <%= render "/shared/categories_sidebar" %>
             <%= render "/shared/tagcloud_sidebar" %>
             <%= render "/shared/recent_comments_sidebar" %>
+            <%= render "/shared/fanfou" %>
           <% end %>
         </div>
 
