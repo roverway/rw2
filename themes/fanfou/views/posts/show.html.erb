@@ -12,7 +12,6 @@
   </h2>
   <%= raw render_body(@post.body) %>
 
-
   <%= link_to 'Back', posts_path %>
   <%= link_to "Comment", new_post_comments_path(@post) %>
 </div>
@@ -25,8 +24,22 @@
   <% end %>
   </p>
 
+  <div id="jiathis">
+    <!-- JiaThis Button BEGIN -->
+    <div id="ckepop">
+      <a class="jiathis_button_qzone"></a>
+      <a class="jiathis_button_tsina"></a>
+      <a class="jiathis_button_renren"></a>
+      <a class="jiathis_button_kaixin001"></a>
+      <a href="http://www.jiathis.com/share/" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+      <a class="jiathis_counter_style"></a>
+    </div>
+    <script type="text/javascript" src="http://v2.jiathis.com/code/jia.js" charset="utf-8"></script>
+    <!-- JiaThis Button END -->
+  </div>
+
   <!-- google +1 button -->
-  <!--  <g:plusone size="small"></g:plusone> -->
+  <!-- <g:plusone size="small"></g:plusone> -->
 </div>
 
 <div id="blank"></div>
