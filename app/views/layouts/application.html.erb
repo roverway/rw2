@@ -4,12 +4,9 @@
     <title> RoverWay, a personal website of linux, ruby on rails and something </title>
     <%= stylesheet_link_tag 'scaffold', 'tagcloud', 'simple' %>
     <%= javascript_include_tag 'prototype', 'effects', 'dragdrop', 'controls', 'rails', 'application' %>
-
     <%= csrf_meta_tag %>
-
     <%= auto_discovery_link_tag :atom, "/feed" %>
     <%= auto_discovery_link_tag :rss, "/feed.rss" %>
-
 
     <!-- for google +1, Place this tag in your head or just before your close body tag -->
     <!--    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>  -->
@@ -43,12 +40,10 @@
         </div>
 
         <div class="leftbar">
-          <% if controller_name=="posts" %>
-            <%= render "/shared/query_sidebar" %>
-            <%= render "/shared/categories_sidebar" %>
-            <%= render "/shared/tagcloud_sidebar" %>
-            <%= render "/shared/recent_comments_sidebar" %>
-          <% end %>
+          <%= yield :query_sidebar %>
+          <%= yield :categories_sidebar %>
+          <%= yield :tagcloud_sidebar %>
+          <%= yield :recent_comments_sidebar %>
         </div>
 
         <div class="mainarea">

@@ -1,5 +1,7 @@
 Rw::Application.routes.draw do
 
+  resources :categories
+
   themes_for_rails
 
   devise_for :users

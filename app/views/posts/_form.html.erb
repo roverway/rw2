@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :category %><br />
-    <%= f.select :category, CATEGORIES %>
+    <%= f.select :category_id, nested_set_options(Category, @category) {|i, level| "#{'-' * level} #{i.name}" } %>
   </div>
   <div class="actions">
     <%= f.submit %>

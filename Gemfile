@@ -16,6 +16,7 @@ gem 'cancan'
 gem 'themes_for_rails'
 
 gem "friendly_id", "~> 3.2.1"
+gem 'nested_set'
 #gem 'ckeditor', :git => 'git://github.com/galetahub/rails-ckeditor.git', :branch => 'rails3' 
 
 

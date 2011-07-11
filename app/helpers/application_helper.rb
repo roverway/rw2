@@ -4,8 +4,8 @@ module ApplicationHelper
     @tags = Post.tag_counts_on(:tags)
   end
 
-  def post_counter(category)
-    Post.where("category=?",category).count
+  def post_counter(category_id)
+    Post.where("category_id=?",category_id).count
   end
 
   def find_post_by(comment)

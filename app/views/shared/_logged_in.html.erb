@@ -7,7 +7,9 @@
         <% current_user.roles.each do |role| %>
           <%= role.name %>
         <% end %>
-        <%= link_to 'New Post', new_post_path %>
+        <%= link_to 'Create New Post', new_post_path %>
+        <%= link_to 'Manage Category', categories_path %>
+        <%= link_to 'Manage users', users_path %>
         <%= link_to "Logout", "/users/sign_out" %>
       </p>
     </span>

@@ -1,10 +1,12 @@
-<% tagcloud %>
-<% if @tags %>
-  <div id="tagcloud">
-    <h3>Tags </h3>
-    <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
-      <%= link_to tag, { :action => :filter, :tag=> tag.name}, :class => css_class %>
-    <% end %>
-  </div>
-<% end %>
+<% content_for :tagcloud_sidebar do %>
+  <% tagcloud %>
+  <% if @tags %>
+    <div id="tagcloud">
+      <h3>Tags </h3>
+      <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
+        <%= link_to tag, { :action => :filter, :tag=> tag.name}, :class => css_class %>
+      <% end %>
+    </div>
+  <% end %>
 
+<% end %>

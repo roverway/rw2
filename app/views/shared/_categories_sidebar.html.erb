@@ -1,11 +1,15 @@
-<div id="category">
-  <h3>Categories</h3>
-  <ul>
-    <% CATEGORIES.each do |c| %>
+<% content_for :categories_sidebar do %>
+  <div id="category">
+    <h3>Categories</h3>
+
+    <% arranged_nodes  = Category.arrange %>
+    <%= render_tree arranged_nodes do |node, child| %>
       <li>
-      <%= link_to c, {:controller=>'posts', :action=>'filter', :category=>c}, :title=>"show posts under this category" %>
-      <span>(<%= post_counter(c) %>)</span>
+      <%= link_to node.name, filter_posts_path(:category_id => node.id) %>
+      <span>(<%= post_counter(node.id) %>)</span>
+      <%= child %>
       </li>
     <% end %>
-  </ul>
-</div>
+
+  </div>
+<% end %>

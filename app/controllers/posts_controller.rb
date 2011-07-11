@@ -6,12 +6,12 @@ class PostsController < ApplicationController
 
   def filter
     @posts = Post.tagged_with(params[:tag]).by_date if params[:tag]
-    @posts = Post.where("category=?", params[:category]) if params[:category]
+    @posts = Post.where("category_id=?", params[:category_id]) if params[:category_id]
     @posts = Post.where("title like ? OR body like ?", "%#{params[:query]}%", "%#{params[:query]}%" ) if params[:query]
   end
 
   def feed
-    @title = "All posts of rw"
+    @title = "roverway, about linux, ruby on rails and something else."
     @posts = Post.order("created_at DESC")
     @updated = @posts.first.updated_at unless @posts.empty?
     @author = "roverway"
@@ -26,8 +26,8 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.xml
   def index
-
     @posts = Post.all(:order => "created_at DESC")
+
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @posts }

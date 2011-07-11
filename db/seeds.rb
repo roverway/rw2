@@ -6,6 +6,12 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 #
-Role.create(:name => 'SuperAdmin')
-Role.create(:name => 'NormalAdmin')
-Role.create(:name => 'Guest')
+#Role.create(:name => 'SuperAdmin')
+#Role.create(:name => 'NormalAdmin')
+#Role.create(:name => 'Guest')
+
+Category.create(:name => 'Linux')
+Category.create(:name => 'Ruby On Rails')
+Category.create(:name => 'Life')
+Category.create(:name => 'others')
+
