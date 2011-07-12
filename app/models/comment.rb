@@ -8,4 +8,5 @@ class Comment < ActiveRecord::Base
     return @post if defined?(@post)
     @post = commentable.is_a?(Post) ? commentable : commentable.post
   end
+
 end
